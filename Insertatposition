@@ -5,40 +5,40 @@ class DoublyLinkedList{
         Node next;
         Node prev;
         Node(int data) {
-            this.data = data;
-            next = null;
-            prev = null;
+            this.data=data;
+            next=null;
+            prev=null;
         }
     }
-    Node head = null, tail = null;
+    Node head=null,tail=null;
     public void InsertAtPosition(int data, int position) {
-        Node newNode = new Node(data);
-        if (position == 1) {
+        Node newNode=new Node(data);
+        if (position==1) {
             newNode.next = head;
-            if (head != null) head.prev = newNode;
-            head = newNode;
-            if (tail == null) tail = newNode;
+            if (head!=null) head.prev=newNode;
+            head=newNode;
+            if (tail==null) tail=newNode;
             return;
         }
-        Node temp = head;
-        int count = 1;
-        while (temp!=null&&count<position-1) {
-            temp = temp.next;
+        Node temp=head;
+        int count=1;
+        while(temp!=null&&count<position-1) {
+            temp=temp.next;
             count++;
         }
-        if (temp != null) {
-            newNode.next = temp.next;
-            if (temp.next != null) temp.next.prev = newNode;
-            temp.next = newNode;
-            newNode.prev = temp;
-            if (newNode.next == null) tail = newNode;
+        if(temp!=null) {
+            newNode.next=temp.next;
+            if (temp.next!=null) temp.next.prev=newNode;
+            temp.next=newNode;
+            newNode.prev=temp;
+            if (newNode.next==null) tail=newNode;
         }
     }
     public void printalltheNodes() {
-        Node temp = head;
-        while (temp != null) {
+        Node temp=head;
+        while (temp!=null) {
             System.out.print(temp.data + " ");
-            temp = temp.next;
+            temp=temp.next;
         }
         System.out.println();
     }
