@@ -1,5 +1,4 @@
 import java.lang.*;
-
 class DoublyLinkedList {
     class Node {
         int data;
@@ -11,9 +10,7 @@ class DoublyLinkedList {
             prev = null;
         }
     }
-
     Node head = null, tail = null;
-
     public void InsertAtBegin(int data) {
         Node newNode = new Node(data);
         if (head == null && tail == null) {
@@ -25,7 +22,6 @@ class DoublyLinkedList {
             head = newNode;
         }
     }
-
     public void printalltheNodes() {
         Node temp = head;
         while (temp != null) {
@@ -34,7 +30,6 @@ class DoublyLinkedList {
         }
         System.out.println();
     }
-
     public static void main(String args[]) {
         DoublyLinkedList list = new DoublyLinkedList();
         list.InsertAtBegin(100);
