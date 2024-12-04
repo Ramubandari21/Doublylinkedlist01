@@ -5,33 +5,33 @@ class DoublyLinkedList {
         Node next;
         Node prev;
         Node(int data) {
-            this.data = data;
-            next = null;
-            prev = null;
+            this.data=data;
+            next=null;
+            prev=null;
         }
     }
-    Node head = null, tail = null;
+    Node head=null,tail=null;
     public void InsertAtBegin(int data) {
-        Node newNode = new Node(data);
-        if (head == null && tail == null) {
-            head = newNode;
-            tail = newNode;
-        } else {
-            newNode.next = head;
-            head.prev = newNode;
-            head = newNode;
+        Node newNode=new Node(data);
+        if (head==null&&tail==null) {
+            head=newNode;
+            tail=newNode;
+        } else{
+            newNode.next=head;
+            head.prev=newNode;
+            head=newNode;
         }
     }
     public void printalltheNodes() {
-        Node temp = head;
-        while (temp != null) {
+        Node temp=head;
+        while(temp!=null) {
             System.out.print(temp.data + " ");
-            temp = temp.next;
+            temp=temp.next;
         }
         System.out.println();
     }
     public static void main(String args[]) {
-        DoublyLinkedList list = new DoublyLinkedList();
+        DoublyLinkedList list=new DoublyLinkedList();
         list.InsertAtBegin(100);
         list.InsertAtBegin(200);
         list.InsertAtBegin(300);
