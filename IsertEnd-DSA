@@ -22,20 +22,20 @@ class DoublyLinkedList{
         }
         else{
             tail.next=newNode;
-            newNode.prev = tail;
+            newNode.prev=tail;
             tail=tail.next;
         }
         
     }
     public void printalltheNodes(){
-        Node temp =head;
+        Node temp=head;
         while(temp!=null){
             System.out.print(temp.data+ " ");
             temp=temp.next;
         }
     }
     public static void main(String args[]){
-        DoublyLinkedList list= new DoublyLinkedList();
+        DoublyLinkedList list=new DoublyLinkedList();
         list.Insertatend(100);
         list.Insertatend(200);
         list.Insertatend(300);
